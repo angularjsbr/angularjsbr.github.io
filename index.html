@@ -13,7 +13,13 @@
         <style>
             .toolbardemoBasicUsage md-toolbar ng-md-icon.md-default-theme {
                 color: white; 
-            }            
+            }    
+            img{
+                width:100%;
+            }
+            #span{
+                font-size: 70%;
+            }
         </style>
         <script>
             var app = angular.module('Friend', ['ngMaterial', 'ngMdIcons']);
@@ -89,19 +95,12 @@
                             <ng-md-icon icon="menu"></ng-md-icon>
                         </md-button>
                         <h2>
-                            <span>Votação para a logomarca da comunidade AngularJS-BR</span>
+                            <span id="span">Votação para a logomarca da comunidade AngularJS-BR</span>
                         </h2>
-                        <span flex></span>
-                        <!--<md-button class="md-icon-button" aria-label="Favorite">
-                            <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-                        </md-button>
-                        <md-button class="md-icon-button" aria-label="More">
-                            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-                        </md-button>-->
                     </div>
                 </md-toolbar>
                 <div id="content" ng-controller='FriendList'>
-                    <div layout="row">
+                    <div layout="row"   layout-sm="column" layout-align="center" layout-margin layout-fill layout-padding>
                         <div flex>
                             <p>A imagem em votação está abaixo:<p>
                                 <img ng-src="https://camo.githubusercontent.com/d802905c4faea7472e95cd4983ad5409d8291475/687474703a2f2f64657673686f7062726173696c2e6769746875622e696f2f64657673686f7062726173696c2f696d616765732f616e67756c61726a73322e706e67"/>
